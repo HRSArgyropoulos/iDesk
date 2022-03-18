@@ -24,6 +24,11 @@ const lightTheme: ITheme = {
   text: {
     primary: '#000',
   },
+  background: {
+    main: '#fff',
+    transparent: 'rgba(230,230,230,0.35)',
+    card: '#e0e0e0',
+  },
   borderRadius: '9px',
   fontFamily: {
     heading: 'Inter',

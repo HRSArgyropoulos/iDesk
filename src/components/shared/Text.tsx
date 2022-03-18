@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 // general style for headings
 const textHeadings = css`
   font-family: ${({ theme }) => theme.fontFamily.heading};
+  color: ${({ theme }) => theme.text.primary};
 `;
 
 const TextH1 = styled.h1`
@@ -39,6 +40,7 @@ const TextH6 = styled.h6`
 // SUBTITLES
 const TextSubtitle = styled.p`
   font-family: ${({ theme }) => theme.fontFamily.subtitles};
+  color: ${({ theme }) => theme.text.primary};
 `;
 
 // extend base subtitle styling
@@ -55,6 +57,7 @@ const TextSubtitle2 = styled(TextSubtitle)`
 const TextBody = styled.p`
   font-family: ${({ theme }) => theme.fontFamily.body};
   font-size: 14px;
+  color: ${({ theme }) => theme.text.primary};
 `;
 
 type HeadingVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

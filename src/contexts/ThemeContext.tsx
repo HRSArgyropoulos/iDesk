@@ -2,6 +2,7 @@ import { createContext, useState } from 'react';
 import { light, dark } from '../themes';
 import ITheme from '../interfaces/theme';
 import { ThemeProvider as ThemeProviderStyled } from 'styled-components';
+import GlobalStyles from '../themes/globalStyles';
 
 interface IThemeContext {
   toggleTheme: (theme: ThemeType) => void;
@@ -38,6 +39,7 @@ const ThemeProvider = ({ children }: IProps) => {
   return (
     <ThemeContext.Provider value={{ toggleTheme }}>
       <ThemeProviderStyled theme={activeTheme}>
+        <GlobalStyles />
         {children}
       </ThemeProviderStyled>
     </ThemeContext.Provider>
