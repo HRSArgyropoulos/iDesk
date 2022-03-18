@@ -22,6 +22,11 @@ interface ITheme {
   text: {
     primary: string;
   };
+  background: {
+    main: string;
+    transparent: string;
+    card: string;
+  };
   borderRadius: string;
   fontFamily: {
     heading: string;

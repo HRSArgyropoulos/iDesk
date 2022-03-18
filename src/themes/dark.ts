@@ -22,7 +22,12 @@ const darkTheme: ITheme = {
     main: '#ffffff',
   },
   text: {
-    primary: '#000',
+    primary: '#fff',
+  },
+  background: {
+    main: '#000',
+    transparent: 'rgba(20,20,20,0.7)',
+    card: '#212121',
   },
   borderRadius: '9px',
   fontFamily: {
