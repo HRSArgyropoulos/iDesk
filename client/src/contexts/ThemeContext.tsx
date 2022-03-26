@@ -1,24 +1,19 @@
 import { createContext, useState } from 'react';
 import { light, dark } from '../themes';
-import ITheme from '../interfaces/theme';
 import { ThemeProvider as ThemeProviderStyled } from 'styled-components';
 import GlobalStyles from '../themes/globalStyles';
-
-interface IThemeContext {
-  toggleTheme: (theme: ThemeType) => void;
-}
-
-interface IProps {
-  children: React.ReactNode;
-}
-
-type ThemeType = 'light' | 'dark';
+import {
+  ITheme,
+  IThemeContext,
+  IThemeProvider,
+} from '../interfaces/theme';
+import { ThemeType } from '../types/theme';
 
 const ThemeContext = createContext<IThemeContext>({
   toggleTheme: () => {},
 });
 
-const ThemeProvider = ({ children }: IProps) => {
+const ThemeProvider = ({ children }: IThemeProvider) => {
   const [activeTheme, setActiveTheme] = useState<ITheme>(light);
 
   const toggleTheme = (theme: ThemeType) => {

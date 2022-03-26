@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IShelf } from '../interfaces/shelf';
 
 const ShelfContainer = styled.div`
   max-width: 100%;
@@ -15,11 +16,7 @@ const ShelfContainer = styled.div`
   transform: translateX(-50%);
 `;
 
-interface IShelfProps {
-  children: React.ReactNode;
-}
-
-const Shelf = ({ children }: IShelfProps) => {
+const Shelf = ({ children }: IShelf) => {
   return <ShelfContainer>{children}</ShelfContainer>;
 };
 

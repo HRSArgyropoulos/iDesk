@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-
+import {
+  IAppIconProps,
+  IAppIconWrapper,
+  IIcon,
+} from '../../interfaces/appIcon';
 import Text from './Text';
 
 const AppIconContainer = styled.div`
@@ -24,22 +28,6 @@ const Icon = styled.img.attrs(({ src }: IIcon) => {
 })`
   width: 100%;
 `;
-
-export type Size = 'small' | 'medium' | 'large';
-
-interface IIcon {
-  src: string;
-}
-
-interface IAppIconWrapper {
-  size?: Size;
-}
-
-interface IAppIconProps {
-  size?: Size;
-  title: string;
-  src: string;
-}
 
 const AppIcon = ({ size = 'small', title, src }: IAppIconProps) => {
   return (

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import backgroundImage from '../images/light/main.jpg';
+import { IDesktop } from '../interfaces/desktop';
 
 const Background = styled.div`
   height: 100%;
@@ -24,11 +25,7 @@ const BackgroundContainer = styled.div`
   width: 100%;
 `;
 
-interface IProps {
-  children: React.ReactNode;
-}
-
-const Desktop = ({ children }: IProps) => {
+const Desktop = ({ children }: IDesktop) => {
   return (
     <Background>
       <BackgroundImage />

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { IWindow } from '../interfaces/windows';
 
 const WindowOuter = styled.div`
   width: 95%;
@@ -12,11 +13,7 @@ const WindowOuter = styled.div`
   overflow-y: scroll;
 `;
 
-interface IWindowProps {
-  children: React.ReactNode;
-}
-
-const Window = ({ children }: IWindowProps) => {
+const Window = ({ children }: IWindow) => {
   return <WindowOuter>{children}</WindowOuter>;
 };
 

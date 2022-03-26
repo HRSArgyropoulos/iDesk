@@ -1,4 +1,5 @@
-interface ITheme {
+import { ThemeType } from '../types/theme';
+export interface ITheme {
   primary: {
     main: string;
     contrastText: string;
@@ -36,4 +37,10 @@ interface ITheme {
   };
 }
 
-export default ITheme;
+export interface IThemeContext {
+  toggleTheme: (theme: ThemeType) => void;
+}
+
+export interface IThemeProvider {
+  children: React.ReactNode;
+}

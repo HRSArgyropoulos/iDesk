@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { ITextProps } from '../../interfaces/text';
 
 // HEADINGS
 // general style for headings
@@ -60,35 +61,33 @@ const TextBody = styled.p`
   color: ${({ theme }) => theme.text.primary};
 `;
 
-type HeadingVariant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-type SubtitleVariant = 'subtitle1' | 'subtitle2';
-type BodyVariant = 'span' | 'p';
+// pass className for styled-compenents to
 
-interface ITextProps {
-  variant?: HeadingVariant | SubtitleVariant | BodyVariant;
-  children: string;
-}
-
-const Text = ({ variant = 'p', children }: ITextProps) => {
+const Text = (props: ITextProps) => {
+  const { variant = 'p', children, ...rest } = props;
   switch (variant) {
     case 'h1':
-      return <TextH1>{children}</TextH1>;
+      return <TextH1 {...rest}>{children}</TextH1>;
     case 'h2':
-      return <TextH2>{children}</TextH2>;
+      return <TextH2 {...rest}>{children}</TextH2>;
     case 'h3':
-      return <TextH3>{children}</TextH3>;
+      return <TextH3 {...rest}>{children}</TextH3>;
     case 'h4':
-      return <TextH4>{children}</TextH4>;
+      return <TextH4 {...rest}>{children}</TextH4>;
     case 'h5':
-      return <TextH5>{children}</TextH5>;
+      return <TextH5 {...rest}>{children}</TextH5>;
     case 'h6':
-      return <TextH6>{children}</TextH6>;
+      return <TextH6 {...rest}>{children}</TextH6>;
     case 'subtitle1':
-      return <TextSubtitle1>{children}</TextSubtitle1>;
+      return <TextSubtitle1 {...rest}>{children}</TextSubtitle1>;
     case 'subtitle2':
-      return <TextSubtitle2>{children}</TextSubtitle2>;
+      return <TextSubtitle2 {...rest}>{children}</TextSubtitle2>;
     default:
-      return <TextBody as={variant}>{children}</TextBody>;
+      return (
+        <TextBody {...rest} as={variant}>
+          {children}
+        </TextBody>
+      );
   }
 };
 

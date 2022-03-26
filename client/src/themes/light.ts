@@ -1,4 +1,4 @@
-import ITheme from '../interfaces/theme';
+import { ITheme } from '../interfaces/theme';
 
 const lightTheme: ITheme = {
   primary: {
@@ -29,7 +29,7 @@ const lightTheme: ITheme = {
     transparent: 'rgba(230,230,230,0.35)',
     card: '#e0e0e0',
   },
-  borderRadius: '9px',
+  borderRadius: '5px',
   fontFamily: {
     heading: 'Inter',
     subtitles: 'Inter',
