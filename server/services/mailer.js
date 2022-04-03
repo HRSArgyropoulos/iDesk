@@ -1,11 +1,8 @@
 const nodemailer = require('nodemailer');
-const {
-  smtpOptions,
-} = require('../helpers/smtpOptions');
+const { smtpOptions } = require('../helpers/smtpOptions');
 
 // create a reusable transporter object using the default SMTP transport
-const transporter =
-  nodemailer.createTransport(smtpOptions);
+const transporter = nodemailer.createTransport(smtpOptions);
 
 // Send email with defined tranport object
 const sendEmail = async (emailOptions) => {
@@ -29,9 +26,9 @@ const sendVerificationEmail = async (user, origin) => {
 
   // create rest of the keys for send email
   const emailOptions = {
-    from: '💊 Pharma App <verifypharmazach@gmail.com>',
+    from: '💻 iDesk <idesk-hrs@gmail.com>',
     to: user.email,
-    subject: 'Pharma New Account - Email Verification',
+    subject: 'iDesk New Account - Email Verification',
     html: msg,
   };
 
@@ -40,11 +37,7 @@ const sendVerificationEmail = async (user, origin) => {
 };
 
 // Send Reset Password Token E-mail
-const sendResetPasswordEmail = async (
-  email,
-  token,
-  origin
-) => {
+const sendResetPasswordEmail = async (email, token, origin) => {
   let msg = `<p>Hello. You have requested to reset your password for this e-mail address.</p>`;
   if (origin) {
     const url = `${origin}/auth/reset-password?token=${token}`;
@@ -58,9 +51,9 @@ const sendResetPasswordEmail = async (
     '<p>If you did not request this email, please ignore it.</p><p>Thank you.</p>';
 
   const emailOptions = {
-    from: '💊 Pharma App <infopharmazach@gmail.com>',
+    from: '💻 iDesk <idesk-hrs@gmail.com>',
     to: email,
-    subject: 'Pharma - Reset Password',
+    subject: 'iDesk - Reset Password',
     html: msg,
   };
 

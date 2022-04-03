@@ -1,10 +1,12 @@
 const smtpOptions = {
   host: 'smtp.gmail.com',
   port: 587,
-  secure: false,
   auth: {
+    type: 'OAuth2',
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    clientId: process.env.EMAIL_CLIENT_ID,
+    clientSecret: process.env.EMAIL_CLIENT_SECRET,
+    refreshToken: process.env.EMAIL_REFRESH_TOKEN,
   },
 };
 
