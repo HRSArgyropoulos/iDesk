@@ -1,0 +1,5 @@
+Sat, 02 Apr 2022 15:50:23 GMT - POST - /login - status: 404 - error_message: Not Found - 145 - 1.331 ms
+Sat, 02 Apr 2022 15:50:44 GMT - POST - /login - status: 404 - error_message: Not Found - 145 - 0.237 ms
+Sat, 02 Apr 2022 16:01:57 GMT - POST - /auth/login - status: 401 - error_message: Username or password is incorrect - 47 - 19.448 ms
+Sat, 02 Apr 2022 16:23:41 GMT - POST - /auth/login - status: 401 - error_message: Username or password is incorrect - 47 - 75.293 ms
+Sat, 02 Apr 2022 16:25:09 GMT - POST - /auth/login - status: 401 - error_message: Username or password is incorrect - 47 - 73.425 ms
